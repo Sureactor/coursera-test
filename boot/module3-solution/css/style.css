@@ -1,0 +1,57 @@
+body{
+	background-color: #000;
+}
+.navbar-header{
+	margin-bottom: 50px;
+}
+#main-nav{
+	background-color: #333;
+	border: 0;
+	border-radius: 0;
+}
+#main-title{
+	text-decoration: none;
+}
+#main-title h1, .main-menu{
+	color: #f44;
+	text-shadow: 2px 2px 8px #f55;
+}
+.menu{
+	font-size: 1.5em;
+	margin-top: 15px;
+	color: #8f8;
+	border-width: 0px 0px 1px 0px;
+	border-color: #ccc;
+	border-style: solid;
+}
+.last{
+	border : 0;
+}
+.menu:hover{
+	font-size: 1.7em;
+	text-shadow: 2px 2px 8px #3f3;
+}
+.para{
+	color: #f99;
+	text-align: justify;
+}
+#check{
+	background-color: #f22;
+	width: 100%;
+	border-radius: 0;
+}
+.main-menu1{
+	text-shadow: 2px 2px 8px #f00;
+	font-size: 1.9em;
+}
+.hr{
+	width: 100%;
+}
+
+@media (max-width: 780px){
+	#check{
+		width: 90vw;
+		margin-left: 4.7vw;
+		align-self: center;
+	}
+} 
