@@ -29,7 +29,22 @@
 		var shop = this;
 		shop.item = "";
 		shop.quantity = "";
-		shop.list = [];
+		shop.list = [{
+			name:'cookie',
+			quantity:'5'
+		},{
+			name:'biscuit',
+			quantity:'6'
+		},{
+			name:'sandwitch',
+			quantity:'2'
+		},{
+			name:'noodles',
+			quantity:'2'
+		},{
+			name:'soup',
+			quantity:'2'
+		}];
 		shop.add = function(){
 			ShoppingListCheckOffService.add(shop.item,shop.quantity);
 			shop.list = ShoppingListCheckOffService.show();
@@ -50,7 +65,22 @@
 
 	function AddItems(){
 		var service = this;
-		var items = [];
+		var items = [{
+			name:'cookie',
+			quantity:'5'
+		},{
+			name:'biscuit',
+			quantity:'6'
+		},{
+			name:'sandwitch',
+			quantity:'2'
+		},{
+			name:'noodles',
+			quantity:'2'
+		},{
+			name:'soup',
+			quantity:'2'
+		}];
 		var boughtItems = [];
 		service.add = function(item,quantity){
 			var lis = {
