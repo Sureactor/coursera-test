@@ -48,6 +48,22 @@ body{
 	width: 100%;
 }
 
+#foot{
+	background-color: #333;
+	border:0;
+	margin-top: 50px;
+}
+
+.col-md-4 p{
+	margin-top: 20px;
+	color:#fff;
+	margin-bottom: 20px;
+}
+
+#quo{
+	color:#4f4;
+	font-size: 0.8em;
+}
 @media (max-width: 780px){
 	#check{
 		width: 90vw;
