@@ -1,0 +1,12 @@
+<br>
+<div class='v'>
+<h1>{{s.title}}</h1>
+<ul>
+	<section>
+	<li ng-repeat='li in s.found'>name :{{li.name}}<br> short_name: {{li.short_name}}<br> description: {{li.description}}
+		<button ng-click='s.onRemove({index:$index});'>Don't want this one!</button>
+	</li>
+	</section>
+</ul>
+<div style="color:red;font-size:2em;font-weight: bold;" ng-if='s.look'>Nothing found</div>
+</div>
