@@ -1,0 +1,4 @@
+.menu:hover{
+	text-shadow: 0px 8px 8px red;
+	cursor: pointer;	
+}
