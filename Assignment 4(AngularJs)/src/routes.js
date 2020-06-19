@@ -28,7 +28,16 @@
 			url:'/items/{ind}',
 			templateUrl:'src/MenuApp/templates/items.template.html',
 			controller:'itemController as item',
+			params:{
+				ind : null
+			},
 			resolve:{
+				name : ['MenuService','$stateParams',function(MenuService,$stateParams){
+						return MenuService.get()
+						.then(function(items){
+							return items.data[$stateParams.ind].name;
+						});
+				}],
 				list_item:['itemService','$stateParams','MenuService',function(itemService,$stateParams,MenuService){
 					return MenuService.get()
 					.then(function(items){
