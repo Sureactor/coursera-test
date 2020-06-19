@@ -1,19 +1,21 @@
 (function(){
+	'use strict'
 	angular.module('MenuApp')
 	.config(RoutesConfig);
 
+
 	RoutesConfig.$inject = ['$stateProvider','$urlRouterProvider'];
 	function RoutesConfig($stateProvider,$urlRouterProvider){
-		$urlRouterProvider.otherwise('/');
+		// $urlRouterProvider.otherwise('/');
 		$stateProvider
 		.state('home',{
 			url:'/',
-			templateUrl:'/src/MenuApp/templates/home.html'
+			templateUrl:'src/MenuApp/templates/home.template.html'
 		})
 		.state('Menu',
 		{
 			url:'/categories',
-			templateUrl:'/src/MenuApp/templates/menu.html',
+			templateUrl:'src/MenuApp/templates/menu.template.html',
 			controller:'MenuController as menu',
 			resolve:{
 				list:['MenuService',function(MenuService){
@@ -24,7 +26,7 @@
 		.state('items',
 		{
 			url:'/items/{ind}',
-			templateUrl:'/src/MenuApp/templates/items.html',
+			templateUrl:'src/MenuApp/templates/items.template.html',
 			controller:'itemController as item',
 			resolve:{
 				list_item:['itemService','$stateParams','MenuService',function(itemService,$stateParams,MenuService){
